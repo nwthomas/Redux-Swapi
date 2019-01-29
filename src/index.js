@@ -5,10 +5,10 @@ import App from "./App";
 import { Provider } from "react-redux";
 import { createStore, applyMiddleware } from "redux";
 import rootReducer from "./reducers";
-import reduxThunk from "redux-thunk";
+import thunk from "redux-thunk";
 import logger from "redux-logger";
 
-const middlewareQueue = applyMiddleware(logger, reduxThunk);
+const middlewareQueue = applyMiddleware(thunk, logger);
 
 const store = createStore(rootReducer, middlewareQueue);
 
