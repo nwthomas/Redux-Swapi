@@ -5,10 +5,6 @@ import { CharacterList } from "../components";
 import { getPeople } from "../actions";
 
 class CharacterListView extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.getPeople();
   }

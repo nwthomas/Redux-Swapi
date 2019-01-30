@@ -10,6 +10,7 @@ const initialState = {
   // Array characters, Boolean fetching, null error.
 };
 export const charsReducer = (state = initialState, action) => {
+  console.log(action.payload);
   switch (action.type) {
     case FETCH_PEOPLE_STARTED:
       return { ...state, fetching: true, error: "" };
